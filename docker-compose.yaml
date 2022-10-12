@@ -1,0 +1,9 @@
+# run with docker compose run -it -v "/Path" image-name "npm commands, init, install etc"
+version: '3.8'
+services:
+  npm:
+    build: ./
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/app
